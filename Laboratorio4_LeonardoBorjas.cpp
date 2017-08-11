@@ -50,12 +50,12 @@ int main(){
 		if(resp==2){
 			camion1=agregarcamion1(camion1, n1, m1);
 	
-		if(camion1[n1-1][m1-1]->getPrecio()==-1){
-			cout<<"El camion 1 no esta lleno";
-		}else{
-			cout<<"El camion 1 esta lleno";
-		}
-		cout<<endl;
+			if(camion1[n1-1][m1-1]->getPrecio()==-1 && camion1[n1-1][m1-1]){
+				cout<<"El camion 1 no esta lleno";
+			}else{
+				cout<<"El camion 1 esta lleno";
+			}
+			cout<<endl;
 		}
 
 
@@ -160,14 +160,17 @@ Bicicleta*** agregarcamion1(Bicicleta*** camion, int n, int m){
 	cout<<"De que color son las llantas";
 	cin >>color;
 	Llanta* llanta=new Llanta(material, precio2, color);
-	for(int i=0;i<n;i++){
+	cout << "here" << endl;
+	for(int i=0;i<10;i++){
 		for(int j=0;j<m;j++){
-			if(camion[i][j]->getPrecio()==-1 && bandera==0){
-				camion[i][j]= new Bicimontana(precio, peso, llanta);
-				bandera=1;
+			if(!camion[i][j] && bandera==0){
+					camion[i][j]= new Bicimontana(precio, peso, llanta);
+					bandera=1;
 			}
 		}
+	
 	}
+	cout << "nothing" << endl;
 	return camion;
 }
 
@@ -186,7 +189,7 @@ Bicicleta*** agregarcamion2(Bicicleta*** camion, int n, int m){
 	cin >>material;
 	cout<<"Cual es el precio de las llantas";
 	cin >>precio2;
-	cout<<"De que color son las llantas";
+	cout<<"De que color son las llantas" << endl;
 	cin >>color;
 	Llanta* llanta=new Llanta(material, precio2, color);
 	for(int i=0;i<n;i++){
