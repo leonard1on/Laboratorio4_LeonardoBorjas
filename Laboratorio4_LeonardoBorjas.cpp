@@ -9,6 +9,8 @@ using namespace std;
 int getM(int);
 Bicicleta*** crearcamion(int, int);
 Bicicleta*** llenarcamion1(Bicicleta***, int, int);
+Bicicleta*** llenarcamion2(Bicicleta***, int, int);
+
 
 int main(){
 	int n1;
@@ -34,13 +36,21 @@ int main(){
 		cin>>resp;
 		if(resp==1){
 			camion1=llenarcamion1(camion1, n1, m1);
-			
 		}
+		if(resp==3){
+			camion2=llenarcamion2(camion2, n2, m2);
+		}
+
+
 		if(camion1[n1-1][m1-1]->getPrecio()==-1){
 			cout<<"El camion 1 no esta lleno";
 		}else{
 			cout<<"El camion esta lleno";
 		}
+		cout<<endl;
+
+
+
 	}while(resp!=5);
 	
 	
@@ -67,6 +77,31 @@ Bicicleta*** llenarcamion1(Bicicleta*** camion, int n, int m){
 	for(int i=0;i<n;i++){
 		for(int j=0;j<m;j++){
 			camion[i][j]= new Bicimontana(precio, peso, llanta);
+		}
+	}
+	return camion;
+}
+
+Bicicleta*** llenarcamion2(Bicicleta*** camion, int n, int m){
+	float precio;
+	float peso;
+	string material;
+	float precio2;
+	string color;
+	cout<<"Cual es el precio de las bicicletas";
+	cin >>precio;
+	cout<<"Cual es el peso de las bicicletas";
+	cin >>peso;
+	cout<<"De que material son las llantas";
+	cin >>material;
+	cout<<"Cual es el precio de las llantas";
+	cin >>precio2;
+	cout<<"De que color son las llantas";
+	cin >>color;
+	Llanta* llanta=new Llanta(material, precio2, color);
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			camion[i][j]= new Bicicarrera(precio, peso, llanta);
 		}
 	}
 	return camion;
