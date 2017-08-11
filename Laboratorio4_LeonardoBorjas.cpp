@@ -195,7 +195,7 @@ Bicicleta*** agregarcamion2(Bicicleta*** camion, int n, int m){
 	for(int i=0;i<n;i++){
 		for(int j=0;j<m;j++){
 			if(camion[i][j]->getPrecio()==-1 && bandera==0){
-				camion[i][j]= new Bicicarrera(precio, peso, llanta);
+				camion[i][j]= new Bicimontana(precio, peso, llanta);
 				bandera=1;
 			}
 		}
