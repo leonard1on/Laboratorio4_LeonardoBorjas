@@ -8,6 +8,7 @@ class Bicicleta{
 		float peso;
 		Llanta* llanta;
 	public:
+		Bicicleta();
 		Bicicleta(float, float, Llanta*);
 		float getPrecio();
 		float getPeso();

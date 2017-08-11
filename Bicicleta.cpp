@@ -1,6 +1,9 @@
 #include "Llanta.h"
 #include "Bicicleta.h"
 
+Bicicleta::Bicicleta(){
+
+}
 Bicicleta::Bicicleta(float pPrecio, float pPeso, Llanta* pllanta){
 	precio = pPrecio;
 	peso = pPeso;
