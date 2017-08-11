@@ -6,6 +6,7 @@
 
 class Bicimontana : public Bicicleta{
 	public:
+		Bicimontana();
 		Bicimontana(float, float, Llanta*);
 };
 #endif
