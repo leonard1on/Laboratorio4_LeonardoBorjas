@@ -1,6 +1,7 @@
-include "Bicicleta.h"
+#include "Llanta.h"
+#include "Bicicleta.h"
 
-Bicimontana::Bicicleta(float pPrecio, float pPeso, Llanta pllanta){
+Bicicleta::Bicicleta(float pPrecio, float pPeso, Llanta* pllanta){
 	precio = pPrecio;
 	peso = pPeso;
 	llanta = pllanta;
@@ -14,7 +15,7 @@ float Bicicleta::getPeso(){
 	return peso;
 }
 
-float Bicicleta::getLlanta(){
+Llanta* Bicicleta::getLlanta(){
 	return llanta;
 }
 
@@ -26,7 +27,7 @@ void Bicicleta::setPeso(float pPeso){
 	peso=pPeso;
 }
 
-void Bicicleta::setLlanta(Llanta pLlanta){
+void Bicicleta::setLlanta(Llanta* pLlanta){
 	llanta=pLlanta;
 }
 
