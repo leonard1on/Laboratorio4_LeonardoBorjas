@@ -7,20 +7,30 @@ using namespace std;
 
 int getM(int);
 Bicicleta** crearcamion(int, int);
-void imprimircamion(Bicicleta**, int, int, int);
 
 int main(){
 	int n1;
 	int n2;
 	int m1;
 	int m2;
+	int resp;
 	cout<<"De que tamaño es su camion de Bicicletas de Montana? n:";
 	cin>>n1;
 	m1=getM(n1);
 	cout<<"De que tamaño es su camion de Bicicletas de Carrera? n:";
 	cin>>n2;
 	m2=getM(n1);
-
+	Bicicleta** camion1=crearcamion(n1,m1);
+	Bicicleta** camion2=crearcamion(n2,m2);
+	do{
+		cout<<"- Menu -" <<endl
+			<<"1. Llenar el Camion de bicis de montana" <<endl
+			<<"2. Agregar al Camion de bicis de montana"<<endl
+			<<"3. Llenar el Camion de bicis de carrera" <<endl
+			<<"4. Agregar al Camion de bicis de carrera"<<endl
+			<<"5. Salir" <<endl <<"Cual es su eleccion:";
+		cin>>resp;
+	}while(resp!=5);
 	
 	
 	return 0;
@@ -46,6 +56,4 @@ Bicicleta** crearcamion(int n, int m){
 	return camion;
 }
 
-void imprimircamion(Bicicleta** camion, int n, int m, int x, inty){
-	
-}
+

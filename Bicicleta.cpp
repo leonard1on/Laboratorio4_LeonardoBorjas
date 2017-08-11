@@ -2,7 +2,7 @@
 #include "Bicicleta.h"
 
 Bicicleta::Bicicleta(){
-
+	precio=-1;
 }
 Bicicleta::Bicicleta(float pPrecio, float pPeso, Llanta* pllanta){
 	precio = pPrecio;
