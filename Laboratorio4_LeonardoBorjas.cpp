@@ -8,7 +8,7 @@ using namespace std;
 
 int getM(int);
 Bicicleta*** crearcamion(int, int);
-Bicicleta*** llenarcamion1(Bicicleta**, int, int);
+Bicicleta*** llenarcamion1(Bicicleta***, int, int);
 
 int main(){
 	int n1;
@@ -66,7 +66,7 @@ Bicicleta*** llenarcamion1(Bicicleta*** camion, int n, int m){
 	Llanta* llanta=new Llanta(material, precio2, color);
 	for(int i=0;i<n;i++){
 		for(int j=0;j<m;j++){
-			camion[i][j]= Bicimontana(precio, peso, llanta);
+			camion[i][j]= new Bicimontana(precio, peso, llanta);
 		}
 	}
 	return camion;
