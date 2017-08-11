@@ -48,14 +48,7 @@ int main(){
 		}
 
 		if(resp==2){
-			camion1=agregarcamion1(camion1, n1, m1);
-	
-			if(camion1[n1-1][m1-1]->getPrecio()==-1 && camion1[n1-1][m1-1]){
-				cout<<"El camion 1 no esta lleno";
-			}else{
-				cout<<"El camion 1 esta lleno";
-			}
-			cout<<endl;
+			camion1=agregarcamion1(camion1, n1, m1);	
 		}
 
 
@@ -72,13 +65,7 @@ int main(){
 
 		if(resp==4){
 			camion2=agregarcamion2(camion2, n2, m2);
-
-		if(camion2[n2-1][m2-1]->getPrecio()==-1){
-			cout<<"El camion 2 no esta lleno";
-		}else{
-			cout<<"El camion 2 esta lleno";
-		}
-		cout<<endl;
+		
 		}
 
 
